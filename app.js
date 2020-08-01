@@ -10,12 +10,10 @@ const HttpError = require('./models/http-error');
 
 app.use(bodyParser.json());
 
-app.use(cors());
-
 app.use((req, res, next) => {
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://sad-wright-fb5df5.netlify.app'
+    'https://echtezalm.herokuapp.com'
   );
   res.setHeader(
     'Access-Control-Allow-Headers',
