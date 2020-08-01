@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(cors());
 app.use((req, res, next) => {
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://echtezalm.herokuapp.com'
+    'https://sad-wright-fb5df5.netlify.app'
   );
   res.setHeader(
     'Access-Control-Allow-Headers',
