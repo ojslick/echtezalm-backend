@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.setHeader(
     'Access-Control-Allow-Origin',
-    'https://distracted-lamport-e402f2.netlify.app'
+    'https://echtezalm.herokuapp.com'
   );
   res.setHeader(
     'Access-Control-Allow-Headers',
