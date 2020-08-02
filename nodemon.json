@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "ojslick",
+    "DB_PASSWORD": "Fb8XZpk5y9z2EnJF",
+    "DB_NAME": "echtezalm",
+    "JWT_KEY": "echtezalm_super_secret_strong"
+  }
+}
