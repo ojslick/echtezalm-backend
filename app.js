@@ -6,6 +6,14 @@ const cors = require('cors');
 const app = express();
 
 const userRoutes = require('./routes/users-routes');
+const productRoutes = require('./routes/products-routes');
+const reviewsRoutes = require('./routes/reviews-routes');
+const collectionRoutes = require('./routes/collection-routes');
+const blogRoutes = require('./routes/blogs-routes');
+const orderRoutes = require('./routes/orders-routes');
+const commentRoutes = require('./routes/comments-routes');
+const subscriptionRoutes = require('./routes/subscriptions-routes');
+
 const HttpError = require('./models/http-error');
 
 app.use(bodyParser.json());
@@ -22,6 +30,20 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/users', userRoutes);
+
+app.use('/api/products', productRoutes);
+
+app.use('/api/reviews', reviewsRoutes);
+
+app.use('/api/collection', collectionRoutes);
+
+app.use('/api/blogs', blogRoutes);
+
+app.use('/api/orders', orderRoutes);
+
+app.use('/api/comments', commentRoutes);
+
+app.use('/api/subscriptions', subscriptionRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError('Could not find this route', 404);
