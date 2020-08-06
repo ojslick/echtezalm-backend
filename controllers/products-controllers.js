@@ -16,7 +16,7 @@ const getProducts = async (req, res, next) => {
     return next(error);
   }
 
-  if (!product) {
+  if (!products) {
     const error = new HttpError('Could not find products.', 404);
 
     return next(error);
